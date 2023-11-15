@@ -83,7 +83,7 @@
 
             try:
                 res = helpers.bulk(self.es,records )
-             except Exception as e:
+            except Exception as e:
                 print("{}".format(e))
 
 
@@ -139,3 +139,5 @@
 
             eshelper = ELK(settings=_settings)
             eshelper.upload(records=records)
+            break
+df= main()
