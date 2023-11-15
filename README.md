@@ -1,37 +1,37 @@
 # Elasticsearch-and-Kibana-ELK-Stack-
-to create a python script where we take data from MySql or MongodDB and insert it into Elasticsearch
-try:
-    import mysql
-    from mysql.connector import connect
-    import json
-    import os
-    import sys
-    import  pandas as pd
-    import threading
+ to create a python script where we take data from MySql or MongodDB and insert it into Elasticsearch
+    try:
+        import mysql
+        from mysql.connector import connect
+        import json
+        import os
+        import sys
+        import  pandas as pd
+        import threading
 
-    import elasticsearch
-    from elasticsearch import Elasticsearch
-
-
-    import json
-    from ast import literal_eval
-    import datetime
-    import os
-    import sys
-    from elasticsearch import helpers
-
-    print("Loaded  .. . . . . . . .")
-except Exception as e:
-    print("Error : {} ".format(e))
+        import elasticsearch
+        from elasticsearch import Elasticsearch
 
 
-class Settings():
+        import json
+        from ast import literal_eval
+        import datetime
+        import os
+        import sys
+        from elasticsearch import helpers
 
-    def __init__(self,
-                 mysqlhost='localhost',
-                 mysqlport=3308,
-                 mysqluser='root',
-                 mysqlpassword='password',
+        print("Loaded  .. . . . . . . .")
+    except Exception as e:
+        print("Error : {} ".format(e))
+
+
+    class Settings():
+
+        def __init__(self,
+                     mysqlhost='localhost',
+                     mysqlport=3308,
+                     mysqluser='root',
+                     mysqlpassword='password',
                  mysqldataBase='mydb',
                  mysqltableName='netflix',
                  mysqlquery='',
