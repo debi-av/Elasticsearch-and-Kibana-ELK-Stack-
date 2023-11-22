@@ -2,9 +2,12 @@
 
 Here is an approach to create a python script where we take data from MySql or MongodDB and insert it into Elasticsearch
   Firstly, here we had imported all the required libraries,
-  then we developed a class as Setting() which have all the settings related to MySQL, Elastic Search etc.
-  Also we had taken a class as MySql(), in which it takes up query and helps to execute that.
-  An another class as ELK(), along with a main function which calls all the above classes.
+  then we developed a class named Settings, which have all the settings related to MySQL, Elastic Search etc.
+  Also we had taken a class named MySql, in which it takes up query and helps to execute that. 
+  With the help of execute() method [in class MySql] we use it to connect to the database, create a cursor object, execute the cursor and we yield the result.
+  An another class named ELK, along with a main function which calls all the above classes.
+  Moreover, we will perform a pagination query i.e. array of queries, then we execute the query, transform the data and push it to Elastic Search.
+  
     try:
         import mysql
         from mysql.connector import connect
